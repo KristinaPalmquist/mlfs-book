@@ -1,0 +1,7 @@
+age                          7.115963
+pclass                       3.000000
+fare                       260.156259
+parch                        0.000000
+sibsp                        1.000000
+label_encoder_embarked_      0.000000
+label_encoder_sex_           1.000000

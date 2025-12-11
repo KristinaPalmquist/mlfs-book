@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Passenger Survival Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="titanic.css">
+</head>
+<body>
+    <h1 class="titanic-header">Titanic</h1>
+    <div class="surround">
+        <div class="main-content mx-auto p-6 rounded-lg shadow-lg">
+            <h2 class="titanic-subheader">Passenger Survival Prediction</h2>
+            <div class="w-full max-w-4xl mx-auto" style="max-width:80%;">
+                <div class="flex flex-col md:flex-row gap-8 mb-8 justify-center items-start">
+                <!-- Database Summary Section -->
+                <section id="db-summary" class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-2 mt-2 text-gray-700 text-center">Database Summary</h3>
+                    <div id="summary-content" class="bg-gray-100 p-4 rounded">Loading summary...</div>
+                </section>
+
+                <!-- Generated Passenger Display Section -->
+                <section id="generated-passenger" class="w-full md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-2 mt-2 text-gray-700 text-center">Generated Passenger</h3>
+                    <div class="passenger-info bg-gray-50 p-4 rounded" id="passenger-info">
+                        <!-- Passenger data will appear here -->
+                    </div>
+                </section>
+            </div>
+
+            <div class="flex gap-4 mb-4 justify-center">
+                <button onclick="generatePassenger()" class="bg-[#FFB400] hover:bg-[#e6a200] text-white font-semibold py-2 px-4 mx-4 rounded shadow">Generate Passenger</button>
+                <button onclick="predictSurvival()" class="bg-[#21B182] hover:bg-[#18976f] text-white font-semibold py-2 px-4 mx-4 rounded shadow">Predict Survival</button>
+            </div>
+
+            <div class="result text-lg font-bold text-center mt-4" id="prediction-result"></div>
+            <img id="prediction-image" alt="Survival Prediction Image" style="display:none;">
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="titanic.js"></script>
+</body>
+</html>
